@@ -35,7 +35,9 @@ app.post("/generate", async (req, res) => {
   }
 });
 
-
+app.get("/test", (req, res) => {
+  res.send("✅ MinQR backend is live and working!");
+});
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
