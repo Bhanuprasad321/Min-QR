@@ -3,6 +3,7 @@ import axios from "axios";
 function QrGen() {
   const [url, setUrl] = useState("");
   const [qrCode, setQrCode] = useState("");
+  const [loading,setLoading] = useState(false);
   const generateQr = async () => {
     if (!url) return alert("please enter a valid URL!");
     try {
@@ -13,7 +14,9 @@ function QrGen() {
       setQrCode(res.data.qrcode);
     } catch (err) {
       alert("Error in generating QRcode!");
-    }
+    }finally {
+    setLoading(false); // hide spinner
+  }
   };
   return (
     <div className="flex flex-col items-center w-[45%]">
@@ -39,6 +42,12 @@ function QrGen() {
             Generate
           </button>
         </div>
+        {loading && (
+          <div className="flex items-center justify-center my-4">
+            <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-purple-500"></div>
+          </div>
+        )}
+
         {qrCode && (
           <div className="h-[400px] w-[300px] flex flex-col justify-center items-center gap-3">
             <img
