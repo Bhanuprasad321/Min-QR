@@ -7,10 +7,10 @@ function QrGen() {
   const generateQr = async () => {
     if (!url) return alert("please enter a valid URL!");
     try {
+      setLoading("true");
       const res = await axios.post("https://min-qr.onrender.com/generate", {
         url,
       });
-      console.log(res);
       setQrCode(res.data.qrcode);
     } catch (err) {
       alert("Error in generating QRcode!");
@@ -47,7 +47,6 @@ function QrGen() {
             <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-purple-500"></div>
           </div>
         )}
-
         {qrCode && (
           <div className="h-[400px] w-[300px] flex flex-col justify-center items-center gap-3">
             <img

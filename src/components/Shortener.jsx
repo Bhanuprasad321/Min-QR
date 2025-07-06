@@ -4,6 +4,7 @@ import QrGen from "./qrGen";
 import { Link } from "react-router-dom";
 function Shortener() {
   const [copied, setCopied] = useState(false);
+  const [loading,setLoading] = useState(false);
   const [longUrl,setLongUrl] = useState('');
   const [shortUrl,setShortUrl] = useState('');
   const [error, setError] = useState('');
@@ -20,6 +21,7 @@ function Shortener() {
     }
 
     try {
+      setLoading("true");
       const res = await fetch('https://min-qr.onrender.com/shorten', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -36,6 +38,9 @@ function Shortener() {
       }
     } catch (err) {
       setError('Server error');
+    }
+    finally {
+      setLoading(false);
     }
   }
   return (
@@ -74,6 +79,11 @@ function Shortener() {
           </CopyToClipboard>
           
         </div>)}
+        {loading && (
+          <div className="flex items-center justify-center my-4">
+            <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-purple-500"></div>
+          </div>
+        )}
         <p className="text-[18px] text-center">want to generate QR code? <a href="/generator" className="text-blue-600 underline">yes</a></p>
         {error && <p className="text-red-500 mt-3">{error}</p>}
       </div>
