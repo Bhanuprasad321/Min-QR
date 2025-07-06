@@ -1,18 +1,40 @@
-<<<<<<< HEAD
-# React + Vite
+# Min-QR 🚀  
+A full-stack web application to **shorten URLs** and **generate QR codes**, built with **React**, **Node.js**, **Express**, and **Tailwind CSS**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔗 Live Demo
+🌐 Frontend: [https://min-qr.vercel.app](https://min-qr.vercel.app)  
+🛠️ Backend: [https://min-qr.onrender.com](https://min-qr.onrender.com)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Features
 
-## Expanding the ESLint configuration
+✅ Shorten long URLs using TinyURL API  
+✅ Generate QR codes for any link  
+✅ Download QR codes as PNG  
+✅ Beautiful, responsive UI with Tailwind CSS  
+✅ Copy-to-clipboard functionality  
+✅ Hosted on Vercel (Frontend) & Render (Backend)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# MinQR
-This is project which can shorten the url and can generate a downloadable qr image.
->>>>>>> 715ceac08be4b9a155a44b5fdf090223c4819fa2
-"# Min-QR" 
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**:  
+- React  
+- Tailwind CSS  
+- Axios  
+- React Router  
+- Vite  
+
+**Backend**:  
+- Node.js  
+- Express  
+- TinyURL API  
+- QRCode npm package  
+- CORS
+
+---
+🤝 Credits
+Developed Bhanu Prasad<br />
+Backend deployed on Render | Frontend deployed on Vercel
