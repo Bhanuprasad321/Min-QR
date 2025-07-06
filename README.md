@@ -36,5 +36,5 @@ A full-stack web application to **shorten URLs** and **generate QR codes**, buil
 
 ---
 🤝 Credits
-Developed Bhanu Prasad
+Developed Bhanu Prasad<br />
 Backend deployed on Render | Frontend deployed on Vercel
