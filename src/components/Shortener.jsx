@@ -20,7 +20,7 @@ function Shortener() {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/shorten', {
+      const res = await fetch('https://min-qr.onrender.com/shorten', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ longUrl }),
@@ -50,6 +50,11 @@ function Shortener() {
           className="border-2 p-1 rounded-sm mr-7 mb-10 "
           value={longUrl}
           onChange={(e) => setLongUrl(e.target.value)}
+          onKeyDown={(e) => {
+    if (e.key === 'Enter') {
+      handleShorten();
+    }
+  }}
         />
         <button className="bg-purple-400 p-1 border-2 rounded-sm hover:bg-purple-300" onClick={handleShorten}>Short</button>
         {shortUrl && (<div className="flex flex-col gap-2 justify-center items-center my-5">

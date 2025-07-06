@@ -77,7 +77,7 @@ function About() {
         </a>
 
         <a
-          href="https://github.com/your-repo-link"
+          href="https://github.com/Bhanuprasad321"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-purple-400 hover:bg-purple-300 text-white font-medium px-4 py-2 rounded-2xl border-2 transition"
